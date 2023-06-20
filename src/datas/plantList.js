@@ -9,6 +9,7 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
   {
     name: 'ficus lyrata',
@@ -18,6 +19,7 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
   {
     name: 'pothos argenté',
@@ -27,6 +29,7 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
   {
     name: 'yucca',
@@ -35,6 +38,7 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
   {
     name: 'olivier',
@@ -44,6 +48,7 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
   {
     name: 'géranium',
@@ -52,6 +57,7 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
   {
     name: 'basilique',
@@ -61,6 +67,7 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
   {
     name: 'aloe',
@@ -70,6 +77,7 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
   {
     name: 'succulente',
@@ -78,5 +86,6 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: monstera,
+    price: 15,
   },
 ];
