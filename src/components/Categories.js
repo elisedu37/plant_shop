@@ -1,4 +1,3 @@
-import '../styles/Categories.css';
 import React from 'react';
 
 function Categories({ setActiveCategory, categories, activeCategory }) {

@@ -4,8 +4,6 @@ import './style.css';
 import Banner from './components/Banner';
 import Cart from './components/Cart';
 import ShoppingList from './components/ShoppingList';
-import Footer from './components/Footer';
-import './styles/Layout.css';
 
 export default function App() {
   const savedCart = localStorage.getItem('cart');
@@ -28,7 +26,6 @@ export default function App() {
         <Cart cart={cart} updateCart={updateCart} />
         <ShoppingList cart={cart} updateCart={updateCart} />
       </div>
-      <Footer />
     </div>
   );
 }

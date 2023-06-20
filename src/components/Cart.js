@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Cart.css';
 import { useState, useEffect } from 'react';
 
 function Cart({ cart, updateCart }) {
