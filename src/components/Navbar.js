@@ -6,7 +6,7 @@ import Cart from './Cart';
 function Navbar({ cart, updateCart }) {
   return (
     <div className="nav">
-      <h1 className="lmj-title">La maison des plantes</h1>
+      <p className="title">La maison des <span>plantes</span></p>
       <Cart cart={cart} updateCart={updateCart} />
     </div>
   );

@@ -16,6 +16,8 @@ function ShoppingList({ cart, updateCart }) {
   );
 
   function addToCart(name, price) {
+    alert('Vous avez ajouté un produit à votre panier');
+
     const currentPlantAdded = cart.find((plant) => plant.name === name);
     if (currentPlantAdded) {
       const cartFilteredCurrentPlant = cart.filter(
@@ -40,7 +42,7 @@ function ShoppingList({ cart, updateCart }) {
     setTimeout(() => {
       setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 10);
       setIsLoading(false);
-    }, 1000);
+    }, 200);
   }
 
   const filteredProducts = plantList.filter((r) =>
