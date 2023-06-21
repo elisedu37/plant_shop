@@ -1,6 +1,9 @@
 import React from 'react';
 
-// Composant Banner
+/**
+ * Component pour le banner hero
+ * @returns {JSX}
+ */
 function Banner({ children }) {
   return (
     <>

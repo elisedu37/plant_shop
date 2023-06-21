@@ -76,8 +76,8 @@ select {
   background-color: #e2e3e3;
   position: absolute;
   z-index: 50;
-  top: 68px;
-  right: 10px;
+  top: 80px;
+  right: 20px;
   border-radius: 20px;
   padding: 20px;
   padding-bottom: 0;
@@ -88,6 +88,9 @@ select {
   padding: 0;
 }
 
+.cart-vide {
+  padding-bottom: 20px;
+}
 /* Banner */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -147,6 +150,7 @@ select {
 .item-content .details {
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
 }
 
 .item {
@@ -160,6 +164,11 @@ select {
   align-items: center;
   max-width: 300px;
   min-width: 300px;
+  transition: 0.2s;
+}
+
+.item:hover {
+  transform: scale(1.05);
 }
 
 .lmj-shopping-list {
