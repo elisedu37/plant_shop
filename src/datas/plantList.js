@@ -1,7 +1,7 @@
 export const plantList = [
   {
     name: 'monstera',
-    category: 'classique',
+    category: 'intérieur',
     id: '1ed',
     light: 2,
     water: 2,
@@ -11,7 +11,7 @@ export const plantList = [
   },
   {
     name: 'ficus lyrata',
-    category: 'classique',
+    category: 'intérieur',
     id: '2ab',
     isBestSale: true,
     light: 2,
@@ -22,7 +22,7 @@ export const plantList = [
   },
   {
     name: 'pothos argenté',
-    category: 'classique',
+    category: 'intérieur',
     id: '3sd',
     isSpecialOffer: true,
     light: 1,
@@ -33,7 +33,7 @@ export const plantList = [
   },
   {
     name: 'yucca',
-    category: 'classique',
+    category: 'intérieur',
     id: '4kk',
     light: 3,
     water: 1,
@@ -64,7 +64,7 @@ export const plantList = [
   },
   {
     name: 'Jardin de plante',
-    category: 'classique',
+    category: 'intérieur',
     id: '7ie',
     isSpecialOffer: true,
     light: 1,

@@ -80,6 +80,8 @@ function ShoppingList({ cart, updateCart }) {
                 </div>
               ) : null
           )}
+        {plantList.filter((r) => r.name.toLowerCase().includes(filter))
+          .length === 0 && <p>Aucun produit</p>}
       </ul>
     </div>
   );
