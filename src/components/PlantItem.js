@@ -18,14 +18,14 @@ function PlantItem({
       <div className="item-content">
         <div className="details">
           {name}
-          {price}
+          <div>{price}€</div>
         </div>
         <div className="infos">
           <CareScale careType="water" scaleValue={water} />
           <CareScale careType="light" scaleValue={light} />
         </div>
         <div className="tags">
-          {isBestSale && <div className="bestseller">Ventes 🔥</div>}
+          {isBestSale && <div className="bestseller">Top ventes</div>}
           {isSpecialOffer && <div className="soldes">Soldes</div>}
         </div>
       </div>

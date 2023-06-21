@@ -5,6 +5,7 @@ p {
 
 body {
   background-color: #fff8f3;
+  font-family: sans-serif;
 }
 
 button {
@@ -15,6 +16,11 @@ button {
   font-size: 16px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 input {
@@ -33,6 +39,11 @@ select {
 .nav {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 48;
+  background: white;
 }
 
 .lmj-title {
@@ -43,10 +54,14 @@ select {
 
 .cart {
   background-color: #e2e3e3;
-  padding: 32px;
   position: absolute;
   z-index: 50;
-  right: 0;
+  top: 68px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 0;
 }
 
 /* Banner */
@@ -58,6 +73,7 @@ select {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin-top: 80px;
 }
 
 .hero-text {
@@ -100,6 +116,11 @@ select {
 }
 
 .item-content {
+  padding: 20px;
+}
+.item-content .details {
+  display: flex;
+  justify-content: space-between;
 }
 
 .item {
@@ -111,7 +132,7 @@ select {
   border-radius: 20px;
   background-color: #e2e3e3;
   align-items: center;
-  max-width: 330px;
+  max-width: 300px;
 }
 
 .lmj-shopping-list {
