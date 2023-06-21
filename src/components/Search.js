@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Composant pour la barre de recherche
 function Search({ setFilter }) {
   function handleInput(e) {
     const filter = e.target.value;

@@ -1,10 +1,13 @@
 import React from 'react';
+// Hooks
+import { useState } from 'react';
+// Composants
 import { plantList } from '../datas/plantList';
 import PlantItem from './PlantItem';
-import { useState } from 'react';
 import Categories from './Categories';
 import Search from './Search';
 
+// Composant pour la liste de produits
 function ShoppingList({ cart, updateCart }) {
   const [activeCategory, setActiveCategory] = useState('');
   const [filter, setFilter] = useState('');

@@ -1,6 +1,9 @@
 import React from 'react';
+// Hooks
 import { useState, useEffect } from 'react';
+// Feuille de style
 import './style.css';
+// Composants
 import Banner from './components/Banner';
 import ShoppingList from './components/ShoppingList';
 import Navbar from './components/Navbar';

@@ -25,6 +25,7 @@ export const plantList = [
     category: 'classique',
     id: '3sd',
     isSpecialOffer: true,
+    isBestSale: true,
     light: 2,
     water: 3,
     cover:
@@ -45,7 +46,7 @@ export const plantList = [
     name: 'olivier',
     category: 'extérieur',
     id: '5pl',
-    isAvailable: false,
+    isSpecialOffer: true,
     light: 2,
     water: 3,
     cover:

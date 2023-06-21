@@ -1,6 +1,8 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+// Hooks
+import { useState } from 'react';
 
+// Composant pour le panier
 function Cart({ cart, updateCart }) {
   const [isOpen, setIsOpen] = useState(true);
   const total = cart.reduce(
@@ -10,10 +12,7 @@ function Cart({ cart, updateCart }) {
 
   return isOpen ? (
     <div className="cart">
-      <button
-        className="cart-toggle"
-        onClick={() => setIsOpen(false)}
-      >
+      <button className="cart-toggle" onClick={() => setIsOpen(false)}>
         Fermer
       </button>
       {cart.length > 0 ? (
@@ -35,10 +34,7 @@ function Cart({ cart, updateCart }) {
     </div>
   ) : (
     <div className="cart-closed">
-      <button
-        className="cart-toggle"
-        onClick={() => setIsOpen(true)}
-      >
+      <button className="cart-toggle" onClick={() => setIsOpen(true)}>
         Ouvrir le Panier
       </button>
     </div>

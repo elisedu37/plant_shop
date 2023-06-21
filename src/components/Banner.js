@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Composant Banner
 function Banner({ children }) {
   return (
     <>

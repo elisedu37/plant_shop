@@ -1,14 +1,14 @@
 import React from 'react';
 
-const quantityLabel = {
-  1: 'peu',
-  2: 'modérément',
-  3: 'beaucoup',
-};
-
+// Composant pour les échelles de lumière et d'arrosage
 function CareScale({ scaleValue, careType }) {
   const range = [1, 2, 3];
   const scaleType = careType === 'light' ? <> 🌞 </> : <>💧</>;
+  const quantityLabel = {
+    1: 'peu',
+    2: 'modérément',
+    3: 'beaucoup',
+  };
 
   return (
     <div

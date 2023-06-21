@@ -20,6 +20,7 @@ button {
 /* Navbar*/
 .nav {
   display: flex;
+  justify-content: space-between;
 }
 
 .lmj-title {
@@ -33,6 +34,7 @@ button {
   padding: 32px;
   position: absolute;
   z-index: 50;
+  right: 0;
 }
 
 /* Banner */
@@ -59,7 +61,12 @@ button {
 
 .filters {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 5vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
 }
 
 .lmj-categories-select {
@@ -68,6 +75,7 @@ button {
 
 .item-li {
   height: 100%;
+  position: relative;
 }
 
 .item-cover {
@@ -95,6 +103,9 @@ button {
 
 .lmj-shopping-list {
   width: 100%;
+  gap: 5vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-product {
@@ -102,12 +113,25 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 1vw;
 }
 
-.lmj-sales {
+.tags {
   position: absolute;
   right: 0px;
   top: 10px;
+}
+
+.tags .soldes {
+  font-weight: 500;
+  color: white;
+  padding: 5px 10px;
+  background-color: #31b572;
+}
+
+.tags .bestseller {
   font-weight: 500;
   color: white;
   padding: 5px 10px;
