@@ -1,10 +1,12 @@
 import React from 'react';
+// Hooks
+import { useState } from 'react';
+// Composants
 import { plantList } from '../datas/plantList';
 import PlantItem from './PlantItem';
-import { useState } from 'react';
 import Categories from './Categories';
-import Search from './Search';
 
+// Composant pour la liste de produits
 function ShoppingList({ cart, updateCart }) {
   const [activeCategory, setActiveCategory] = useState('');
   const [filter, setFilter] = useState('');
@@ -30,11 +32,15 @@ function ShoppingList({ cart, updateCart }) {
     }
   }
 
+  function handleInput(e) {
+    const filter = e.target.value;
+    setFilter(filter.trim().toLowerCase());
+  }
+
   return (
     <div className="lmj-shopping-list">
-      <h1>Nos produits</h1>
       <div className="filters">
-        <Search setFilter={setFilter} />
+        <input onInput={handleInput} type="text" placeholder="Rechercher" />
         <Categories
           categories={categories}
           setActiveCategory={setActiveCategory}
@@ -58,7 +64,7 @@ function ShoppingList({ cart, updateCart }) {
               isSpecialOffer,
             }) =>
               !activeCategory || activeCategory === category ? (
-                <div key={id}>
+                <div key={id} className="item">
                   <PlantItem
                     cover={cover}
                     name={name}
@@ -74,6 +80,8 @@ function ShoppingList({ cart, updateCart }) {
                 </div>
               ) : null
           )}
+        {plantList.filter((r) => r.name.toLowerCase().includes(filter))
+          .length === 0 && <p>Aucun produit</p>}
       </ul>
     </div>
   );

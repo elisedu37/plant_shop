@@ -3,73 +3,178 @@ p {
   font-family: sans-serif;
 }
 
-.banner {
+body {
+  background-color: #fff8f3;
+  font-family: sans-serif;
+}
+
+button {
+  background-color: #fff8f3;
+  border: none;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  padding: 10px 15px;
+  border: 2px solid #e2e3e3;
+  border-radius: 20px;
+  flex: 0.8;
+}
+
+select {
+  padding: 10px 15px;
+  border: 2px solid #e2e3e3;
+  border-radius: 20px;
+}
+
+/* Navbar*/
+.nav {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 48;
+  background: white;
 }
 
 .lmj-title {
   padding-left: 32px;
 }
 
-.lmj-logo {
-  height: 45px;
-  width: 45px;
-}
+/*Panier*/
 
 .cart {
-  color: white;
-  background-color: #31b572;
-  padding: 32px;
+  background-color: #e2e3e3;
   position: absolute;
+  z-index: 50;
+  top: 68px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 0;
 }
+
+/* Banner */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.pexels.com/photos/4451742/pexels-photo-4451742.jpeg?auto=compress&cs=tinysrgb');
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 80px;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/*Liste produits*/
 
 .filters {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 5vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
 }
 
 .lmj-categories-select {
   margin-right: 15px;
 }
 
-.lmj-layout-inner {
-  display: flex;
-  flex-direction: row;
+.item-li {
+  height: 100%;
+  position: relative;
 }
 
-.lmj-plant-item-cover {
+.item-cover {
   height: 220px;
-  width: 220px;
-  border-radius: 20px;
+  width: 100%;
   object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
 }
 
-.lmj-plant-item {
+.item-content {
+  padding: 20px;
+}
+.item-content .details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
   margin: 10px;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   text-transform: capitalize;
+  border-radius: 20px;
+  background-color: #e2e3e3;
+  align-items: center;
+  max-width: 300px;
 }
 
 .lmj-shopping-list {
   width: 100%;
+  gap: 5vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-product {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 1vw;
 }
 
-.lmj-sales {
+.tags {
   position: absolute;
   right: 0px;
   top: 10px;
+}
+
+.tags .soldes {
+  font-weight: 500;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #b56631;
+  border-start-start-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+.tags .bestseller {
   font-weight: 500;
   color: white;
   padding: 5px 10px;
   background-color: #31b572;
+  border-start-start-radius: 20px;
+  border-end-end-radius: 20px;
+  margin-right: 5px;
 }

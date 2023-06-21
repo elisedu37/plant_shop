@@ -1,7 +1,12 @@
 import React from 'react';
 
+// Composant Banner
 function Banner({ children }) {
-  return <div className="banner">{children}</div>;
+  return (
+    <>
+      {children}
+    </>
+  );
 }
 
 export default Banner;
