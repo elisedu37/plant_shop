@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 h1,
-p {
-  font-family: sans-serif;
+p,
+span {
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 48px;
 }
 
 body {
   background-color: #fff8f3;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 button {
@@ -16,6 +24,7 @@ button {
   font-size: 16px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  cursor: pointer;
 }
 
 ul {
@@ -45,10 +54,20 @@ select {
   top: 0;
   z-index: 48;
   background: white;
+  align-items: center;
+  padding: 20px;
+  width: -webkit-fill-available;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.lmj-title {
-  padding-left: 32px;
+.title {
+  font-size: 24px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.title span {
+  font-family: 'Kablammo', cursive;
 }
 
 /*Panier*/
@@ -57,24 +76,31 @@ select {
   background-color: #e2e3e3;
   position: absolute;
   z-index: 50;
-  top: 68px;
-  right: 10px;
-  cursor: pointer;
+  top: 80px;
+  right: 20px;
   border-radius: 20px;
   padding: 20px;
   padding-bottom: 0;
 }
 
+.cart-toggle {
+  background-color: white;
+  padding: 0;
+}
+
+.cart-vide {
+  padding-bottom: 20px;
+}
 /* Banner */
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://images.pexels.com/photos/4451742/pexels-photo-4451742.jpeg?auto=compress&cs=tinysrgb');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('https://images.pexels.com/photos/4374576/pexels-photo-4374576.jpeg?auto=compress&cs=tinysrgb');
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .hero-text {
@@ -84,6 +110,7 @@ select {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  border-bottom: solid;
 }
 
 /*Liste produits*/
@@ -105,6 +132,7 @@ select {
 .item-li {
   height: 100%;
   position: relative;
+  width: 100%;
 }
 
 .item-cover {
@@ -122,6 +150,7 @@ select {
 .item-content .details {
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
 }
 
 .item {
@@ -131,9 +160,15 @@ select {
   flex-direction: column;
   text-transform: capitalize;
   border-radius: 20px;
-  background-color: #e2e3e3;
+  background: rgb(234 238 225);
   align-items: center;
   max-width: 300px;
+  min-width: 300px;
+  transition: 0.2s;
+}
+
+.item:hover {
+  transform: scale(1.05);
 }
 
 .lmj-shopping-list {
@@ -161,20 +196,30 @@ select {
 
 .tags .soldes {
   font-weight: 500;
-  color: white;
   padding: 5px 10px;
   margin-right: 5px;
-  background-color: #b56631;
+  background-color: #ede0d5;
   border-start-start-radius: 20px;
   border-end-end-radius: 20px;
 }
 
 .tags .bestseller {
   font-weight: 500;
-  color: white;
   padding: 5px 10px;
-  background-color: #31b572;
+  background-color: #cae9ed;
   border-start-start-radius: 20px;
   border-end-end-radius: 20px;
   margin-right: 5px;
+}
+
+.load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load-more button {
+  background-color: #4a874a;
+  border-radius: 20px;
+  color: white;
 }

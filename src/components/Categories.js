@@ -1,6 +1,12 @@
 import React from 'react';
 
-// Composant pour le filtre par catégorie
+/**
+ * Component pour le filtre par catégorie
+ * @param {Function} setActiveCategory permet de mettre à jour la valeur activeCategory
+ * @param {Array} categories liste de toutes les catégories pour créer le select
+ * @param {string} activeCategory catégorie de filtre activée : tout, intérieur, extérieur...
+ * @returns {JSX}
+ */
 function Categories({ setActiveCategory, categories, activeCategory }) {
   return (
     <div className="lmj-categories">

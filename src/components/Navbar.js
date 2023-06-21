@@ -2,11 +2,18 @@ import React from 'react';
 // Composants
 import Cart from './Cart';
 
-// Composant pour la barre de navigation
+/**
+ * Component pour la barre de navigation
+ * @param {Array} cart tableau qui comprend tout les articles qui sont dans le panier
+ * @param {Function} updateCart fonction qui permet l'ajout ou le retrait d'un élément du panier
+ * @returns {JSX}
+ */
 function Navbar({ cart, updateCart }) {
   return (
     <div className="nav">
-      <h1 className="lmj-title">La maison des plantes</h1>
+      <p className="title">
+        La maison des <span>plantes</span>
+      </p>
       <Cart cart={cart} updateCart={updateCart} />
     </div>
   );
