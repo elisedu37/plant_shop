@@ -7,14 +7,11 @@ function Cart({ cart, updateCart }) {
     (acc, plantType) => acc + plantType.amount * plantType.price,
     0
   );
-  useEffect(() => {
-    document.title = `LMJ: ${total}€ d'achats`;
-  }, [total]);
 
   return isOpen ? (
-    <div className="lmj-cart">
+    <div className="cart">
       <button
-        className="lmj-cart-toggle-button"
+        className="cart-toggle"
         onClick={() => setIsOpen(false)}
       >
         Fermer
@@ -37,9 +34,9 @@ function Cart({ cart, updateCart }) {
       )}
     </div>
   ) : (
-    <div className="lmj-cart-closed">
+    <div className="cart-closed">
       <button
-        className="lmj-cart-toggle-button"
+        className="cart-toggle"
         onClick={() => setIsOpen(true)}
       >
         Ouvrir le Panier

@@ -3,9 +3,12 @@ import { plantList } from '../datas/plantList';
 import PlantItem from './PlantItem';
 import { useState } from 'react';
 import Categories from './Categories';
+import Search from './Search';
 
 function ShoppingList({ cart, updateCart }) {
   const [activeCategory, setActiveCategory] = useState('');
+  const [filter, setFilter] = useState('');
+
   const categories = plantList.reduce(
     (acc, elem) =>
       acc.includes(elem.category) ? acc : acc.concat(elem.category),
@@ -29,40 +32,48 @@ function ShoppingList({ cart, updateCart }) {
 
   return (
     <div className="lmj-shopping-list">
-      <Categories
-        categories={categories}
-        setActiveCategory={setActiveCategory}
-        activeCategory={activeCategory}
-      />
+      <h1>Nos produits</h1>
+      <div className="filters">
+        <Search setFilter={setFilter} />
+        <Categories
+          categories={categories}
+          setActiveCategory={setActiveCategory}
+          activeCategory={activeCategory}
+        />
+      </div>
 
       <ul className="list-product">
-        {plantList.map(
-          ({
-            id,
-            cover,
-            name,
-            water,
-            light,
-            price,
-            category,
-            isBestSale,
-            isSpecialOffer,
-          }) =>
-            !activeCategory || activeCategory === category ? (
-              <div key={id}>
-                <PlantItem
-                  cover={cover}
-                  name={name}
-                  water={water}
-                  light={light}
-                  price={price}
-                  isBestSale={isBestSale}
-                  isSpecialOffer={isSpecialOffer}
-                />
-                <button onClick={() => addToCart(name, price)}>Ajouter</button>
-              </div>
-            ) : null
-        )}
+        {plantList
+          .filter((r) => r.name.toLowerCase().includes(filter))
+          .map(
+            ({
+              id,
+              cover,
+              name,
+              water,
+              light,
+              price,
+              category,
+              isBestSale,
+              isSpecialOffer,
+            }) =>
+              !activeCategory || activeCategory === category ? (
+                <div key={id}>
+                  <PlantItem
+                    cover={cover}
+                    name={name}
+                    water={water}
+                    light={light}
+                    price={price}
+                    isBestSale={isBestSale}
+                    isSpecialOffer={isSpecialOffer}
+                  />
+                  <button onClick={() => addToCart(name, price)}>
+                    Ajouter
+                  </button>
+                </div>
+              ) : null
+          )}
       </ul>
     </div>
   );

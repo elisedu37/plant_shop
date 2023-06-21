@@ -21,9 +21,9 @@ export default function App() {
           className="lmj-logo"
         />
         <h1 className="lmj-title">La maison jungle</h1>
+        <Cart cart={cart} updateCart={updateCart} />
       </Banner>
       <div className="lmj-layout-inner">
-        <Cart cart={cart} updateCart={updateCart} />
         <ShoppingList cart={cart} updateCart={updateCart} />
       </div>
     </div>

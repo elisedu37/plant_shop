@@ -17,13 +17,14 @@ p {
   width: 45px;
 }
 
-.lmj-cart {
+.cart {
   color: white;
   background-color: #31b572;
   padding: 32px;
+  position: absolute;
 }
 
-.lmj-categories {
+.filters {
   text-align: center;
   padding-top: 30px;
 }
