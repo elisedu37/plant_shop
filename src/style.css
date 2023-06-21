@@ -17,6 +17,18 @@ button {
   border-top-left-radius: 20px;
 }
 
+input {
+  padding: 10px 15px;
+  border: 2px solid var(--gray-2);
+  border-radius: 20px;
+}
+
+select {
+  padding: 10px 15px;
+  border: 2px solid var(--gray-2);
+  border-radius: 20px;
+}
+
 /* Navbar*/
 .nav {
   display: flex;
@@ -80,7 +92,7 @@ button {
 
 .item-cover {
   height: 220px;
-  width: 220px;
+  width: 100%;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -99,6 +111,7 @@ button {
   border-radius: 20px;
   background-color: #e2e3e3;
   align-items: center;
+  max-width: 330px;
 }
 
 .lmj-shopping-list {

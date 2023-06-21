@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { plantList } from '../datas/plantList';
 import PlantItem from './PlantItem';
 import Categories from './Categories';
-import Search from './Search';
 
 // Composant pour la liste de produits
 function ShoppingList({ cart, updateCart }) {
@@ -33,10 +32,15 @@ function ShoppingList({ cart, updateCart }) {
     }
   }
 
+  function handleInput(e) {
+    const filter = e.target.value;
+    setFilter(filter.trim().toLowerCase());
+  }
+
   return (
     <div className="lmj-shopping-list">
       <div className="filters">
-        <Search setFilter={setFilter} />
+        <input onInput={handleInput} type="text" placeholder="Rechercher" />
         <Categories
           categories={categories}
           setActiveCategory={setActiveCategory}

@@ -11,20 +11,18 @@ function CareScale({ scaleValue, careType }) {
   };
 
   return (
-    <div
-      onClick={() =>
-        alert(
-          `Cette plante requiert ${quantityLabel[scaleValue]} ${
-            careType === 'light' ? 'de lumière' : "d'arrosage"
-          }`
+    <div>
+      <p>
+        Quantité
+        {careType === 'light' ? ' de lumière' : " d'arrosage"} :
+        {quantityLabel[scaleValue]}(
+        {range.map((rangeElem) =>
+          scaleValue >= rangeElem ? (
+            <span key={rangeElem.toString()}>{scaleType}</span>
+          ) : null
+        )}
         )
-      }
-    >
-      {range.map((rangeElem) =>
-        scaleValue >= rangeElem ? (
-          <span key={rangeElem.toString()}>{scaleType}</span>
-        ) : null
-      )}
+      </p>
     </div>
   );
 }
