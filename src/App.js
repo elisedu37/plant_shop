@@ -2,8 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './style.css';
 import Banner from './components/Banner';
-import Cart from './components/Cart';
 import ShoppingList from './components/ShoppingList';
+import Navbar from './components/Navbar';
 
 export default function App() {
   const savedCart = localStorage.getItem('cart');
@@ -13,19 +13,16 @@ export default function App() {
   }, [cart]);
 
   return (
-    <div>
+    <>
+      <Navbar cart={cart} updateCart={updateCart} />
       <Banner>
-        <img
-          src="https://stackblitz.com/files/react-test-elise/github/elisedu37/react_test/develop/src/assets/logo.png"
-          alt="La maison jungle"
-          className="lmj-logo"
-        />
-        <h1 className="lmj-title">La maison jungle</h1>
-        <Cart cart={cart} updateCart={updateCart} />
+        <div class="hero-image">
+          <div class="hero-text">
+            <h1>Nos produits</h1>
+          </div>
+        </div>
       </Banner>
-      <div className="lmj-layout-inner">
-        <ShoppingList cart={cart} updateCart={updateCart} />
-      </div>
-    </div>
+      <ShoppingList cart={cart} updateCart={updateCart} />
+    </>
   );
 }

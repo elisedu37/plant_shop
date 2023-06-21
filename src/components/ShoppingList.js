@@ -32,7 +32,6 @@ function ShoppingList({ cart, updateCart }) {
 
   return (
     <div className="lmj-shopping-list">
-      <h1>Nos produits</h1>
       <div className="filters">
         <Search setFilter={setFilter} />
         <Categories
@@ -58,7 +57,7 @@ function ShoppingList({ cart, updateCart }) {
               isSpecialOffer,
             }) =>
               !activeCategory || activeCategory === category ? (
-                <div key={id}>
+                <div key={id} className="item">
                   <PlantItem
                     cover={cover}
                     name={name}
