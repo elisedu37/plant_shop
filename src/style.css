@@ -3,6 +3,39 @@ p {
   font-family: sans-serif;
 }
 
+body {
+  background-color: #fff8f3;
+}
+
+button {
+  background-color: #fff8f3;
+  border: none;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+/* Navbar*/
+.nav {
+  display: flex;
+}
+
+.lmj-title {
+  padding-left: 32px;
+}
+
+/*Panier*/
+
+.cart {
+  background-color: #e2e3e3;
+  padding: 32px;
+  position: absolute;
+  z-index: 50;
+}
+
+/* Banner */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('https://images.pexels.com/photos/4451742/pexels-photo-4451742.jpeg?auto=compress&cs=tinysrgb');
@@ -22,25 +55,7 @@ p {
   color: white;
 }
 
-.nav {
-  display: flex;
-}
-
-.lmj-title {
-  padding-left: 32px;
-}
-
-.lmj-logo {
-  height: 45px;
-  width: 45px;
-}
-
-.cart {
-  color: white;
-  background-color: #31b572;
-  padding: 32px;
-  position: absolute;
-}
+/*Liste produits*/
 
 .filters {
   text-align: center;
@@ -51,12 +66,7 @@ p {
   margin-right: 15px;
 }
 
-.lmj-layout-inner {
-  display: flex;
-  flex-direction: row;
-}
-
-.item-li{
+.item-li {
   height: 100%;
 }
 
@@ -75,13 +85,12 @@ p {
 .item {
   margin: 10px;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   text-transform: capitalize;
   border-radius: 20px;
-  border: 1px;
-  background-color: lightgray;
+  background-color: #e2e3e3;
+  align-items: center;
 }
 
 .lmj-shopping-list {
@@ -92,6 +101,7 @@ p {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .lmj-sales {
