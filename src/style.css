@@ -277,9 +277,17 @@ select {
 .modal-img img {
   object-fit: cover;
   height: 100%;
+  width: 100%;
 }
 
 .modal-content {
   display: flex;
   flex-direction: column;
+  width: 50%;
+}
+
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
