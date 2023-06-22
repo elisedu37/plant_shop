@@ -1,6 +1,8 @@
 import React from 'react';
 // Hooks
 import { useState } from 'react';
+// Icones
+import { Trash, ShoppingCart } from 'phosphor-react';
 
 /**
  * Component pour le panier
@@ -18,26 +20,39 @@ function Cart({ cart, updateCart }) {
   );
   // Nombre d'élément dans le panier
   const nbArticles = cart.reduce((acc, plantType) => acc + plantType.amount, 0);
+  // Supprimer un item du panier
+  const deleteItem = (index) => {
+    const updatedCart = [...cart];
+    updatedCart.splice(index, 1);
+    updateCart(updatedCart);
+  };
 
   return (
     <>
       <button className="cart-toggle" onClick={() => setIsOpen(!isOpen)}>
-        Panier ({nbArticles})
+        <ShoppingCart size={24} />({nbArticles})
       </button>
       {isOpen && (
         <div className="cart">
           {cart.length > 0 ? (
-            <>
-              <ul>
-                {cart.map(({ name, price, amount }, index) => (
-                  <div key={`${name}-${index}`}>
-                    {name} {price}€ x {amount}
-                  </div>
-                ))}
-              </ul>
+            <div className="cart-list">
               <h3>Total :{totalPrice}€</h3>
+              {cart.map(({ name, price, amount }, index) => (
+                <div key={`${name}-${index}`} className="cart-item">
+                  <div
+                    onClick={() => deleteItem(index)}
+                    className="delete-item"
+                  >
+                    <Trash size={24} />
+                  </div>
+                  {name}
+                  <div>
+                    {price}€ x {amount}
+                  </div>
+                </div>
+              ))}
               <button onClick={() => updateCart([])}>Vider le panier</button>
-            </>
+            </div>
           ) : (
             <div className="cart-vide">Votre panier est vide</div>
           )}
