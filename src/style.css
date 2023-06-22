@@ -251,3 +251,35 @@ select {
   border-radius: 20px;
   color: white;
 }
+
+.customModal {
+  width: 80vw;
+  height: 80vh;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: flex;
+}
+
+/*Modal*/
+
+.modal-img {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.modal-img img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}

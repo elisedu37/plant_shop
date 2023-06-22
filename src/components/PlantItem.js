@@ -1,4 +1,8 @@
 import React from 'react';
+// Hooks
+import { useState } from 'react';
+// Package
+import ReactModal from 'react-modal';
 // Composant
 import CareScale from './CareScale';
 
@@ -15,6 +19,7 @@ import CareScale from './CareScale';
  */
 function PlantItem({
   cover,
+  bigCover,
   name,
   price,
   water,
@@ -22,24 +27,43 @@ function PlantItem({
   isBestSale,
   isSpecialOffer,
 }) {
+  // Modal pour plus d'infos sur le produit
+  const [isModalOpen, setModalOpen] = useState(false);
+
   return (
-    <li className="item-li">
-      <img className="item-cover" src={cover} alt={`${name} cover`} />
-      <div className="item-content">
-        <div className="details">
-          {name}
-          <div>{price}€</div>
+    <React.Fragment>
+      <li className="item-li" onClick={() => setModalOpen(true)}>
+        <img className="item-cover" src={cover} alt={`${name} cover`} />
+        <div className="item-content">
+          <div className="details">
+            {name}
+            <div>{price}€</div>
+          </div>
+          <div className="infos">
+            <CareScale careType="water" scaleValue={water} />
+            <CareScale careType="light" scaleValue={light} />
+          </div>
+          <div className="tags">
+            {isBestSale && <div className="bestseller">Top ventes</div>}
+            {isSpecialOffer && <div className="soldes">Soldes</div>}
+          </div>
         </div>
-        <div className="infos">
-          <CareScale careType="water" scaleValue={water} />
-          <CareScale careType="light" scaleValue={light} />
+      </li>
+      <ReactModal
+        isOpen={isModalOpen}
+        onRequestClose={() => setModalOpen(false)}
+        contentLabel="Product Modal"
+        className="customModal"
+      >
+        <div className="modal-img">
+          <img src={bigCover} alt={`${name} cover`} />
         </div>
-        <div className="tags">
-          {isBestSale && <div className="bestseller">Top ventes</div>}
-          {isSpecialOffer && <div className="soldes">Soldes</div>}
+        <div className="modal-content">
+          <h2>{name}</h2>
+          <p>Prix: {price}€</p>
         </div>
-      </div>
-    </li>
+      </ReactModal>
+    </React.Fragment>
   );
 }
 

@@ -87,6 +87,7 @@ function ShoppingList({ cart, updateCart }) {
           ({
             id,
             cover,
+            bigCover,
             name,
             water,
             light,
@@ -97,6 +98,7 @@ function ShoppingList({ cart, updateCart }) {
             <div key={id} className="item">
               <PlantItem
                 cover={cover}
+                bigCover={bigCover}
                 name={name}
                 water={water}
                 light={light}
