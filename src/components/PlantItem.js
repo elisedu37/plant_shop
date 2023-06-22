@@ -29,6 +29,7 @@ function PlantItem({
   light,
   isBestSale,
   isSpecialOffer,
+  addToCart,
 }) {
   // Modal pour plus d'infos sur le produit
   const [isModalOpen, setModalOpen] = useState(false);
@@ -60,22 +61,42 @@ function PlantItem({
       >
         <div className="modal-img">
           <img src={bigCover} alt={`${name} cover`} />
+          <div className="tags">
+            {isBestSale && <div className="bestseller">Top ventes</div>}
+            {isSpecialOffer && <div className="soldes">Soldes</div>}
+          </div>
         </div>
         <div className="modal-content">
-          <h2>{name}</h2>
-          <p>Prix: {price}€</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis
-            elit vel purus ultricies molestie. Quisque vel lectus in nulla
-            malesuada suscipit. Donec posuere porta auctor. Donec vitae arcu ac
-            elit sollicitudin congue. Sed interdum, ipsum at bibendum
-            vestibulum, augue massa aliquet enim, a vestibulum lorem est sit
-            amet nulla. Fusce ac leo ut tellus sodales blandit. Suspendisse
-            lacus sapien, ultricies et tristique sit amet, euismod ac tellus.
-            Morbi diam velit, malesuada a feugiat id, rhoncus in magna. Nulla
-            convallis at erat blandit imperdiet. Praesent orci tortor, molestie
-            et consequat vitae, dignissim eget arcu.
-          </p>
+          <div className="text">
+            <h2>{name}</h2>
+            <p>Prix: {price}€</p>
+            <div className="infos">
+              <CareScale careType="water" scaleValue={water} />
+              <CareScale careType="light" scaleValue={light} />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              mattis elit vel purus ultricies molestie. Quisque vel lectus in
+              nulla malesuada suscipit. Donec posuere porta auctor. Donec vitae
+              arcu ac elit sollicitudin congue. Sed interdum, ipsum at bibendum
+              vestibulum, augue massa aliquet enim, a vestibulum lorem est sit
+              amet nulla. Fusce ac leo ut tellus sodales blandit. Suspendisse
+              lacus sapien, ultricies et tristique sit amet, euismod ac tellus.
+              Morbi diam velit, malesuada a feugiat id, rhoncus in magna. Nulla
+              convallis at erat blandit imperdiet. Praesent orci tortor,
+              molestie et consequat vitae, dignissim eget arcu.Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Sed mattis elit vel purus
+              ultricies molestie. Quisque vel lectus in nulla malesuada
+              suscipit. Donec posuere porta auctor. Donec vitae arcu ac elit
+              sollicitudin congue. Sed interdum, ipsum at bibendum vestibulum,
+              augue massa aliquet enim, a vestibulum lorem est sit amet nulla.
+              Fusce ac leo ut tellus sodales blandit. Suspendisse lacus sapien,
+              ultricies et tristique sit amet, euismod ac tellus. Morbi diam
+              velit, malesuada a feugiat id, rhoncus in magna. Nulla convallis
+              at erat blandit imperdiet.
+            </p>
+          </div>
+          <button onClick={addToCart}>Ajouter</button>
         </div>
         <div className="btn-close" onClick={() => setModalOpen(false)}>
           <XCircle size={32} />

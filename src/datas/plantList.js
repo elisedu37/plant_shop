@@ -8,7 +8,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/3125195/pexels-photo-3125195.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/3125195/pexels-photo-3125195.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/3125195/pexels-photo-3125195.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 20,
   },
   {
@@ -21,7 +21,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/7084310/pexels-photo-7084310.jpeg?auto=compress&cs=tinysrgb&h=220&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/7084310/pexels-photo-7084310.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/7084310/pexels-photo-7084310.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 30,
   },
   {
@@ -34,7 +34,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/7663968/pexels-photo-7663968.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/7663968/pexels-photo-7663968.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/7663968/pexels-photo-7663968.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 25,
   },
   {
@@ -46,7 +46,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/6207389/pexels-photo-6207389.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/6207389/pexels-photo-6207389.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/6207389/pexels-photo-6207389.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 35,
   },
   {
@@ -59,7 +59,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/14763509/pexels-photo-14763509.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/14763509/pexels-photo-14763509.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/14763509/pexels-photo-14763509.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 45,
   },
   {
@@ -71,7 +71,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/6769967/pexels-photo-6769967.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/6769967/pexels-photo-6769967.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/6769967/pexels-photo-6769967.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 20,
   },
   {
@@ -84,7 +84,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/6913840/pexels-photo-6913840.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/6913840/pexels-photo-6913840.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/6913840/pexels-photo-6913840.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 30,
   },
   {
@@ -97,7 +97,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/1382394/pexels-photo-1382394.jpeg?auto=compress&cs=tinysrgb&h=220&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/1382394/pexels-photo-1382394.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/1382394/pexels-photo-1382394.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 15,
   },
   {
@@ -109,7 +109,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/16328278/pexels-photo-16328278/free-photo-of-jardin-plantes-plantes-grasses-pots-de-fleurs.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/16328278/pexels-photo-16328278/free-photo-of-jardin-plantes-plantes-grasses-pots-de-fleurs.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/16328278/pexels-photo-16328278/free-photo-of-jardin-plantes-plantes-grasses-pots-de-fleurs.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 12,
   },
   {
@@ -121,7 +121,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/3125195/pexels-photo-3125195.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/3125195/pexels-photo-3125195.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/3125195/pexels-photo-3125195.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 20,
   },
   {
@@ -134,7 +134,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/7084310/pexels-photo-7084310.jpeg?auto=compress&cs=tinysrgb&h=220&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/7084310/pexels-photo-7084310.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/7084310/pexels-photo-7084310.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 30,
   },
   {
@@ -147,7 +147,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/7663968/pexels-photo-7663968.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/7663968/pexels-photo-7663968.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/7663968/pexels-photo-7663968.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 25,
   },
   {
@@ -159,7 +159,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/6207389/pexels-photo-6207389.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/6207389/pexels-photo-6207389.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/6207389/pexels-photo-6207389.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 35,
   },
   {
@@ -172,7 +172,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/14763509/pexels-photo-14763509.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/14763509/pexels-photo-14763509.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/14763509/pexels-photo-14763509.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 45,
   },
   {
@@ -184,7 +184,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/6769967/pexels-photo-6769967.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/6769967/pexels-photo-6769967.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/6769967/pexels-photo-6769967.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 20,
   },
   {
@@ -197,7 +197,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/6913840/pexels-photo-6913840.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/6913840/pexels-photo-6913840.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/6913840/pexels-photo-6913840.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 30,
   },
   {
@@ -210,7 +210,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/1382394/pexels-photo-1382394.jpeg?auto=compress&cs=tinysrgb&h=220&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/1382394/pexels-photo-1382394.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/1382394/pexels-photo-1382394.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 15,
   },
   {
@@ -222,7 +222,7 @@ export const plantList = [
     cover:
       'https://images.pexels.com/photos/16328278/pexels-photo-16328278/free-photo-of-jardin-plantes-plantes-grasses-pots-de-fleurs.jpeg?auto=compress&cs=tinysrgb&w=310&lazy=load',
     bigCover:
-      'https://images.pexels.com/photos/16328278/pexels-photo-16328278/free-photo-of-jardin-plantes-plantes-grasses-pots-de-fleurs.jpeg?auto=compress&cs=tinysrgb&h=600&lazy=load',
+      'https://images.pexels.com/photos/16328278/pexels-photo-16328278/free-photo-of-jardin-plantes-plantes-grasses-pots-de-fleurs.jpeg?auto=compress&cs=tinysrgb&h=600',
     price: 12,
   },
 ];

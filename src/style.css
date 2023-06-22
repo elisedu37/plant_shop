@@ -252,8 +252,9 @@ select {
   color: white;
 }
 
+/*Modal*/
 .customModal {
-  width: 80vw;
+  width: 50vw;
   height: 80vh;
   background: white;
   position: absolute;
@@ -264,14 +265,13 @@ select {
   display: flex;
 }
 
-/*Modal*/
-
 .modal-img {
   height: 100%;
   width: 50%;
   overflow: hidden;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
+  position: relative;
 }
 
 .modal-img img {
@@ -283,11 +283,20 @@ select {
 .modal-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 50%;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
+.modal-content .text {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: auto;
+}
 .btn-close {
   position: absolute;
   right: 20px;
   top: 20px;
+  background: white;
 }
