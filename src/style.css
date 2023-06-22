@@ -11,6 +11,11 @@ h1 {
   font-size: 48px;
 }
 
+h3 {
+  margin: 0;
+  text-align: center;
+}
+
 body {
   background-color: #fff8f3;
   font-family: 'Inter', sans-serif;
@@ -86,11 +91,34 @@ select {
 .cart-toggle {
   background-color: white;
   padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .cart-vide {
   padding-bottom: 20px;
 }
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.delete-item {
+  padding: 0;
+  margin: 0;
+  height: 24px;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /* Banner */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -222,4 +250,53 @@ select {
   background-color: #4a874a;
   border-radius: 20px;
   color: white;
+}
+
+/*Modal*/
+.customModal {
+  width: 50vw;
+  height: 80vh;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: flex;
+}
+
+.modal-img {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  position: relative;
+}
+
+.modal-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal-content .text {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: auto;
+}
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: white;
 }

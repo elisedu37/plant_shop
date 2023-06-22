@@ -87,6 +87,7 @@ function ShoppingList({ cart, updateCart }) {
           ({
             id,
             cover,
+            bigCover,
             name,
             water,
             light,
@@ -97,12 +98,14 @@ function ShoppingList({ cart, updateCart }) {
             <div key={id} className="item">
               <PlantItem
                 cover={cover}
+                bigCover={bigCover}
                 name={name}
                 water={water}
                 light={light}
                 price={price}
                 isBestSale={isBestSale}
                 isSpecialOffer={isSpecialOffer}
+                addToCart={() => addToCart(name, price)}
               />
               <button onClick={() => addToCart(name, price)}>Ajouter</button>
             </div>

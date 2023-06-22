@@ -1,10 +1,17 @@
 import React from 'react';
+// Hooks
+import { useState } from 'react';
+// Package
+import ReactModal from 'react-modal';
 // Composant
 import CareScale from './CareScale';
+// Icones
+import { XCircle } from 'phosphor-react';
 
 /**
  * Component pour chaque item de la liste de produits
  * @param {string} cover Image du produit
+ * @param {string} bigCover Image du produit en qualité supérieur
  * @param {string} name Nom du produit
  * @param {number} price Prix du produit
  * @param {number} water Echelle d'eau dont le produit a besoin
@@ -15,31 +22,87 @@ import CareScale from './CareScale';
  */
 function PlantItem({
   cover,
+  bigCover,
   name,
   price,
   water,
   light,
   isBestSale,
   isSpecialOffer,
+  addToCart,
 }) {
+  // Modal pour plus d'infos sur le produit
+  const [isModalOpen, setModalOpen] = useState(false);
+
   return (
-    <li className="item-li">
-      <img className="item-cover" src={cover} alt={`${name} cover`} />
-      <div className="item-content">
-        <div className="details">
-          {name}
-          <div>{price}€</div>
+    <React.Fragment>
+      <li className="item-li" onClick={() => setModalOpen(true)}>
+        <img className="item-cover" src={cover} alt={`${name} cover`} />
+        <div className="item-content">
+          <div className="details">
+            {name}
+            <div>{price}€</div>
+          </div>
+          <div className="infos">
+            <CareScale careType="water" scaleValue={water} />
+            <CareScale careType="light" scaleValue={light} />
+          </div>
+          <div className="tags">
+            {isBestSale && <div className="bestseller">Top ventes</div>}
+            {isSpecialOffer && <div className="soldes">Soldes</div>}
+          </div>
         </div>
-        <div className="infos">
-          <CareScale careType="water" scaleValue={water} />
-          <CareScale careType="light" scaleValue={light} />
+      </li>
+      <ReactModal
+        isOpen={isModalOpen}
+        onRequestClose={() => setModalOpen(false)}
+        contentLabel="Single Product"
+        className="customModal"
+      >
+        <div className="modal-img">
+          <img src={bigCover} alt={`${name} cover`} />
+          <div className="tags">
+            {isBestSale && <div className="bestseller">Top ventes</div>}
+            {isSpecialOffer && <div className="soldes">Soldes</div>}
+          </div>
         </div>
-        <div className="tags">
-          {isBestSale && <div className="bestseller">Top ventes</div>}
-          {isSpecialOffer && <div className="soldes">Soldes</div>}
+        <div className="modal-content">
+          <div className="text">
+            <h2>{name}</h2>
+            <p>Prix: {price}€</p>
+            <div className="infos">
+              <CareScale careType="water" scaleValue={water} />
+              <CareScale careType="light" scaleValue={light} />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              mattis elit vel purus ultricies molestie. Quisque vel lectus in
+              nulla malesuada suscipit. Donec posuere porta auctor. Donec vitae
+              arcu ac elit sollicitudin congue. Sed interdum, ipsum at bibendum
+              vestibulum, augue massa aliquet enim, a vestibulum lorem est sit
+              amet nulla. Fusce ac leo ut tellus sodales blandit. Suspendisse
+              lacus sapien, ultricies et tristique sit amet, euismod ac tellus.
+              Morbi diam velit, malesuada a feugiat id, rhoncus in magna. Nulla
+              convallis at erat blandit imperdiet. Praesent orci tortor,
+              molestie et consequat vitae, dignissim eget arcu.Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Sed mattis elit vel purus
+              ultricies molestie. Quisque vel lectus in nulla malesuada
+              suscipit. Donec posuere porta auctor. Donec vitae arcu ac elit
+              sollicitudin congue. Sed interdum, ipsum at bibendum vestibulum,
+              augue massa aliquet enim, a vestibulum lorem est sit amet nulla.
+              Fusce ac leo ut tellus sodales blandit. Suspendisse lacus sapien,
+              ultricies et tristique sit amet, euismod ac tellus. Morbi diam
+              velit, malesuada a feugiat id, rhoncus in magna. Nulla convallis
+              at erat blandit imperdiet.
+            </p>
+          </div>
+          <button onClick={addToCart}>Ajouter</button>
         </div>
-      </div>
-    </li>
+        <div className="btn-close" onClick={() => setModalOpen(false)}>
+          <XCircle size={32} />
+        </div>
+      </ReactModal>
+    </React.Fragment>
   );
 }
 
